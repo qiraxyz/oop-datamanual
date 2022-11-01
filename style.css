@@ -1,0 +1,22 @@
+.ferom {
+    width:  600px;
+    height: 500px;
+    background-color: #000000e0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 27.6%;
+    top: 20px;
+    padding: 0 0;
+    border-radius: 12px;
+}
+.ferom input {
+    border-radius: 16px;
+    width: 300px;
+    height: 20px;
+}
+.ferom #submit {
+    width: 300px;
+    height: 40px;
+}
