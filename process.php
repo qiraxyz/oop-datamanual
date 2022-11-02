@@ -14,19 +14,17 @@ class biodata {
   protected $kelamin;
   protected $alamat;
 
-  protected $diprotek = [$email, $nohp, $kelamin, $alamat];
+  
 
-  public function aksesp() {
-    return $this->email=$_POST['email'];
-  }
-  public function akses2() {
-    return $this->nohp= $_POST['nohp'];
-  }
-  public function akses3() {
-    return $this->nohp= $_POST['nohp'];
-  }
-  public function akses4() {
-    return $this->alamat= $_POST['alamat'];
+  public function aksesp($email, $nohp, $kelamin, $alamat) {
+    $data = [
+      "email" => $this->email = $email, 
+      "nohp" => $this->nohp = $nohp,
+      "kelamin" => $this->kelamin = $kelamin,
+      "alamat" => $this->alamat = $alamat,
+  ];
+
+  return $data;
   }
 
 //penanda protected
