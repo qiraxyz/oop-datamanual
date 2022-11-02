@@ -1,64 +1,51 @@
 <?php
-// buat class laptop
 class biodata {
-  // buat property untuk class laptop
+
+  // property public
   public $nama;
   public $kelas;
   public $jurusan;
   public $sekolah;
 
-  // buat property untuk class laptop
-
+  //property protected
   protected $email;
   protected $nohp;
   protected $kelamin;
   protected $alamat;
 
-  
+//function array call
+public function aksesd() {
+  $ppb = [
+    "nama" => $this->nama = $_POST['nama'],
+    "kelas" => $this->kelas = $_POST['kelas'],
+    "jurusan" => $this->jurusan = $_POST['jurusan'],
+    "sekolah" => $this->sekolah = $_POST['sekolah']
+];
 
-  public function aksesp($email, $nohp, $kelamin, $alamat) {
-    $data = [
-      "email" => $this->email = $email, 
-      "nohp" => $this->nohp = $nohp,
-      "kelamin" => $this->kelamin = $kelamin,
-      "alamat" => $this->alamat = $alamat,
+return $ppb;
+}
+}
+
+//child extends from biodata public
+class BiodataDefender extends biodata {
+
+//function array call
+  public function aksesp() {
+    $pdb = [
+      "email" => $this->email = $_POST['email'],
+      "nohp" => $this->nohp = $_POST['nohp'],
+      "kelamin" => $this->kelamin = $_POST['kelamin'],
+      "alamat" => $this->alamat = $_POST['alamat']
   ];
 
-  return $data;
+  return $pdb;
   }
-
-//penanda protected
  }
+// instasization data
+$dbload = new BiodataDefender();
   
-// buat objek dari class laptop (instansiasi)
-$dbload = new biodata();
-  
-// set property
-$dbload->nama= $_POST['nama'];
-$dbload->kelas= $_POST['kelas'];
-$dbload->jurusan= $_POST['jurusan'];
-$dbload->sekolah= $_POST['sekolah'];
+// set property and call to index
+$dbloads = $dbload->aksesd();
+$dbloadd =  $dbload->aksesp();
 
-  
-// // tampilkan property
-// echo $dbload->nama;
-// echo "<br />";
-// echo $dbload->kelas;
-// echo "<br />";
-// echo $dbload->jurusan;
-// echo "<br />";
-// echo $dbload->sekolah;
-// echo "<br />";
-
-// // tampilkan protected property
-// echo $dbload->penanda_pa();
-// echo "<br />";
-// echo $dbload->akses_email();
-// echo "<br />";
-// echo $dbload->akses_nohp();
-// echo "<br />";
-// echo $dbload->akses_kelamin();
-// echo "<br />";
-// echo $dbload->akses_alamat();
-// echo "<br />";
-// ?>
+?>

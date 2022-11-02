@@ -21,20 +21,16 @@
 							</tr>
 						</thead>
 						<tbody>
-						<?php 
-                $dbloads = $dbload->aksesp($_POST['email'], $_POST['nohp'], $_POST['kelamin'], $_POST['alamat']);
-                // var_dump($dbsiswa)
-                ?>
 									<tr>
-										<td><?php echo $dbload->nama ?></td>
-										<td><?php echo $dbload->kelas ?></td>
-										<td><?php echo $dbload->jurusan ?></td>
-                                        <td><?php echo $dbload->sekolah ?></td>
+										<td><?= $dbloads["nama"] ?></td>
+										<td><?= $dbloads["kelas"] ?></td>
+										<td><?= $dbloads["jurusan"] ?></td>
+										<td><?= $dbloads["sekolah"] ?></td>
 										
-										<td><?= $dbloads["email"] ?></td>
-										<td><?= $dbloads["nohp"] ?></td>
-										<td><?= $dbloads["kelamin"] ?></td>
-										<td><?= $dbloads["alamat"] ?></td>
+										<td><?= $dbloadd["email"] ?></td>
+										<td><?= $dbloadd["nohp"] ?></td>
+										<td><?= $dbloadd["kelamin"] ?></td>
+										<td><?= $dbloadd["alamat"] ?></td>
 										
 									</tr>
 						</tbody>
